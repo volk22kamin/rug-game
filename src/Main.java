@@ -209,7 +209,7 @@ public class Main {
               else secondRow++;
             }
             break;
-          case 6:
+          case 3:
             if (hasPlayerWon(playerRow, playerCol + 1)) {
               matchISGoing = false;
             }
@@ -227,7 +227,7 @@ public class Main {
               else secondCol--;
             }
             break;
-          case 8:
+          case 1:
             if (hasPlayerWon(playerRow - 1, playerCol)) {
               matchISGoing = false;
             }
