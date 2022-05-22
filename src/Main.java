@@ -93,6 +93,8 @@ public class Main {
     return result;
   }
 
+  // getting the indexes of the frame of the rug to check nearest 
+  // meet point with a player
   public static int[][] getRugFrame(int rugRow, int rugCol, int size) {
     int[][] rugFrame = new int[size * 4 - 4][2];
     int rugMatIndex = 0;
@@ -107,6 +109,8 @@ public class Main {
     return rugFrame;
   }
 
+  
+ // checking the nearest point from the player location
   public static int[] closestPoint(int row, int col, int[][] rugIndexes) {
     int minRow = 40, minCol = 40;
     int[] closestPoint = new int[2];
@@ -124,6 +128,7 @@ public class Main {
     return closestPoint;
   }
 
+  // checking which player is closer
   public static int getWhosCloser(int rugRow, int rugCol, int size, int aRow, int aCol, int bRow, int bCol) {
     int[][] rugFrame = getRugFrame(rugRow, rugCol, size);
     int[] playerAMeetPoint = closestPoint(aRow, aCol, rugFrame);
